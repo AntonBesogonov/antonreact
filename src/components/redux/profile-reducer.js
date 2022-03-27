@@ -1,7 +1,16 @@
 const ADD_POST = "ADD_POST";
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
-let profileReducer = (state, action) => {
+
+initionalState = {
+  compot: [
+    { id: 111, name: '1' },
+    { id: 22, name: 'geru' },
+  ],
+  newPostText: ''
+};
+
+let profileReducer = (state = initionalState, action) => {
 
   if (action.type === ADD_POST) {
     let newPost = {
