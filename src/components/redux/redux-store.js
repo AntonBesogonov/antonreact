@@ -1,11 +1,6 @@
-import { combineReducers, createStore } from "redux";
-import profileReducer from '../redux/profile-reducer';
+import { createStore } from "redux";
 
-let reducers = combineReducers({
-  profilePage: profileReducer
-  
-});
+let store = createStore();
 
-let store = createStore(reducers);
- 
+
 export default store;
