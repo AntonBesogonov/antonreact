@@ -38,10 +38,11 @@ let store = {
         name: this._state.profilePage.newPostText,
       };
       this._state.profilePage.compot.push(newPost);
-      this._state.profilePage.newPostText = '';
+      
       this._rerender(this._state);
     } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      this._state.profilePage.newPostText = action.newPost;
+      
+      this._state.profilePage.newPostText = action.newText;
       this._rerender(this._state);
     }
      

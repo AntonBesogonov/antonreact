@@ -1,10 +1,11 @@
 import reportWebVitals from './reportWebVitals';
 import store from './components/redux/state';
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+
 
 
 
@@ -15,7 +16,9 @@ let rerender = (state) => {
       <BrowserRouter>
         <App
           appState={state}
-          dispatch={store.dispatch.bind(store)}                  
+          
+          dispatch={store.dispatch.bind(store)}       
+          
          />
       </BrowserRouter>
     </React.StrictMode>,

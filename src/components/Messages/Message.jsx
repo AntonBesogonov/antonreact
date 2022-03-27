@@ -1,5 +1,5 @@
 import React from 'react';
-import updateNewPostText from '../redux/profile-reducer';
+
 import mess from './Mes.module.css';
 import { addPostActionCreator, updateNewPostTextActionCreator } from '../redux/state';
 
@@ -17,9 +17,11 @@ const Message = (props) => {
    }
 
    let onPostChange = () => {
-      let text = newMessage.current.value;      
-      let action = updateNewPostTextActionCreator(text);
-      props.dispatch(action);  
+      let text = newMessage.current.value;   
+      
+      props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
+      
+      
    } 
 
 
