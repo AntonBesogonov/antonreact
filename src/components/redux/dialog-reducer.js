@@ -8,7 +8,7 @@ let initionalState = {
 
 
 let dialogReducer = (state = initionalState, action) => {
-
+  
   return state;
 };
 
