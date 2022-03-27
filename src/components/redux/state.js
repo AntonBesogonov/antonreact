@@ -14,7 +14,7 @@ let store = {
     },
     dialogPro: {
       qwerty: [
-        { id: 888, name: ')))' },
+        { id: 888, name: ')11))' },
         { id: 999, name: ')))' },
       ],
     },
