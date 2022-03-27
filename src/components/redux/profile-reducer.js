@@ -2,7 +2,7 @@ const ADD_POST = "ADD_POST";
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 
-initionalState = {
+let initionalState = {
   compot: [
     { id: 111, name: '1' },
     { id: 22, name: 'geru' },

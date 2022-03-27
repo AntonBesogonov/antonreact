@@ -1,5 +1,5 @@
 
-initionalState = {
+let initionalState = {
   qwerty: [
     { id: 888, name: ')))' },
     { id: 999, name: ')))' },
