@@ -1,5 +1,7 @@
-import profileReducer from "../redux/profile-reducer"
 
+
+const ADD_POST = "ADD_POST";
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 
 let store = {
@@ -30,10 +32,19 @@ let store = {
     this._rerender = observer; //наблюдатель обсервер (патерн)
   },
   dispatch(action) {
-    profileReducer(this._state.profilePage.newPostText, action);
-
-    this._rerender(this._state);
-    
+    if (action.type === ADD_POST) {
+      let newPost = {
+        id: 51,
+        name: this._state.profilePage.newPostText,
+      };
+      this._state.profilePage.compot.push(newPost);
+      this._state.profilePage.newPostText = '';
+      this._rerender(this._state);
+    } else if (action.type === UPDATE_NEW_POST_TEXT) {
+      this._state.profilePage.newPostText = action.newPost;
+      this._rerender(this._state);
+    }
+     
    
   } 
 }
