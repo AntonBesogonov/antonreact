@@ -1,8 +1,6 @@
 
-
-const ADD_POST = "ADD_POST";
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
+import profileReducer from "./profile-reducer";
+import dialogReducer from "./dialog-reducer";
 
 let store = {
 
@@ -25,41 +23,17 @@ let store = {
     return this._state
   },
   _rerender() {
-    
-   },
+  },
  
-  subscribe(observer){
+  subscribe(observer) {
     this._rerender = observer; //наблюдатель обсервер (патерн)
   },
   dispatch(action) {
-    if (action.type === ADD_POST) {
-      let newPost = {
-        id: 51,
-        name: this._state.profilePage.newPostText,
-      };
-      this._state.profilePage.compot.push(newPost);
-      
-      this._rerender(this._state);
-    } else if (action.type === UPDATE_NEW_POST_TEXT) {
-      
-      this._state.profilePage.newPostText = action.newText;
-      this._rerender(this._state);
-    }
-     
-   
-  } 
-}
-
-export let addPostActionCreator = () => {
-    return {
-     type: ADD_POST
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.profilePage = dialogReducer(this._state.profilePage, action);
+    this._rerender(this._state);
   }
-}
-
-export let updateNewPostTextActionCreator = (text) => {
-  return {type: UPDATE_NEW_POST_TEXT, newText: text}
-}
-
+};
 
 export default store;
 
