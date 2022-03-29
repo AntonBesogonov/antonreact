@@ -22,12 +22,14 @@ let store = {
   getState() {
     return this._state
   },
+
   _rerender() {
   },
  
   subscribe(observer) {
     this._rerender = observer; //наблюдатель обсервер (патерн)
   },
+  
   dispatch(action) {
     this._state.profilePage = profileReducer(this._state.profilePage, action);
     this._state.profilePage = dialogReducer(this._state.profilePage, action);

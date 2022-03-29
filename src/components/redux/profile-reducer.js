@@ -11,13 +11,13 @@ let initionalState = {
 };
 
 let profileReducer = (state = initionalState, action) => {
-
   if (action.type === ADD_POST) {
     let newPost = {
       id: 51,
       name: state.newPostText,
     };
     state.compot.push(newPost);    
+    
   } else if (action.type === UPDATE_NEW_POST_TEXT) {
     state.newPostText = action.newText;    
   }

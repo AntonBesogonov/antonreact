@@ -9,16 +9,13 @@ import { BrowserRouter } from 'react-router-dom';
 
 
 
-let rerender = (state) => {
-  
+let rerender = (state) => {  
   ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
         <App
-          appState={state}
-          
-          dispatch={store.dispatch.bind(store)}       
-          
+          appState={state}          
+          dispatch={store.dispatch.bind(store)}                 
          />
       </BrowserRouter>
     </React.StrictMode>,

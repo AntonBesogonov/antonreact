@@ -23,6 +23,7 @@ const App = (props) => {
         <Route path="/profile" element={<Profile two={props.appState.dialogPro.qwerty} />} />
         <Route path="/messag" element={<Message two={props.appState.profilePage.compot} dispatch={props.dispatch}  /> }  />
       </Routes>
+      
     </div>
   );
 };
