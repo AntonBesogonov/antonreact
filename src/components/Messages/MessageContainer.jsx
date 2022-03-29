@@ -9,7 +9,7 @@ const MessageContainer = (props) => {
       props.store.dispatch(addPostActionCreator());
    };
 
-   let onPostChange = () => {
+   let onPostChange = (text) => {
       let action = updateNewPostTextActionCreator(text);
       props.store.dispatch(action);      
    };
