@@ -31,7 +31,7 @@ const Message = (props) => {
             <textarea onChange={onPostChange} ref={newMessage} value={props.newPostText}  />
          </div>
          <div>
-            <button onClick={addMesag}>Добавить</button>
+            <button onClick={addMesag}>--- Send ---</button>
             
          </div>
       </div>

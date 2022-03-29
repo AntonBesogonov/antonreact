@@ -16,8 +16,8 @@ let profileReducer = (state = initionalState, action) => {
     let newPost = {
       id: 51,
       name: state.newPostText,
-    };
-    state.compot.push(newPost);    
+    };    
+    state.compot.push(newPost);   
   } else if (action.type === UPDATE_NEW_POST_TEXT) {
     state.newPostText = action.newText;    
   }
