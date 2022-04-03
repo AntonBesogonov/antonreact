@@ -13,9 +13,9 @@ const Message = (props) => {
 
    let onPostChange = () => {
       let text = newMessage.current.value;
-      debugger;
+      
       props.updateNewPostText(text);
-      debugger;
+      
    };
 
 
