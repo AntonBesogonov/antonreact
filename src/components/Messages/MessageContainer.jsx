@@ -14,7 +14,7 @@ const MessageContainer = (props) => {
       props.store.dispatch(action);      
    };
 
-   return ( <Message updateNewPostText={onPostChange} addMesag={addMesag} personList={props.two} /> );
+   return (<Message updateNewPostText={onPostChange} addMesag={addMesag} personList={props.profilePage.personList} /> );
 };
 
 export default MessageContainer;

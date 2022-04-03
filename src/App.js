@@ -5,6 +5,7 @@ import Header from './components/Head/Header';
 import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
 import Message from './components/Messages/Message';
+import MessageContainer from './components/Messages/MessageContainer';
 
 
 const App = (props) => {

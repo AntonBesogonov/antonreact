@@ -1,6 +1,7 @@
 import React from 'react';
 import mess from './Mes.module.css';
-import { addPostActionCreator, updateNewPostTextActionCreator } from '../redux/profile-reducer';
+
+
 
 
 const Message = (props) => {
@@ -8,14 +9,16 @@ const Message = (props) => {
    let newMessage = React.createRef();
 
    let onAddMesag = () => {
+      
       props.addMesag();      
    };
 
    let onPostChange = () => {
-      let text = newMessage.current.value;
       
+      let text = newMessage.current.value; 
+      debugger;
       props.updateNewPostText(text);
-      
+      debugger;
    };
 
 
