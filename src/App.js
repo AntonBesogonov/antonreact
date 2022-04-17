@@ -5,6 +5,7 @@ import Header from './components/Head/Header';
 import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
 import Message from './components/Messages/Message';
+import MessageContainer from './components/Messages/MessageContainer';
 
 
 const App = (props) => {
@@ -21,7 +22,7 @@ const App = (props) => {
 
       <Routes>
         <Route path="/profile" element={<Profile two={props.appState.dialogPro.qwerty} />} />
-        <Route path="/messag" element={<Message two={props.appState.profilePage.compot} dispatch={props.dispatch}  /> }  />
+        <Route path="/messag" element={<Message store={props.store} two={props.appState.profilePage.compot} dispatch={props.dispatch}  /> }  />
       </Routes>
     </div>
   );
