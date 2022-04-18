@@ -1,5 +1,7 @@
 import React from 'react';
+import { addPostActionCreator } from '../redux/profile-reducer';
 import mess from './Mes.module.css';
+
 
 
 
@@ -8,17 +10,17 @@ const Message = (props) => {
    let personList = props.two.map(client => <div>{client.id} and {client.name} </div>);   
    let newMessage = React.createRef();
 
-   let onAddMesag = (props) => {
+   let onAddMesag = () => {
       
-      props.addMesag();      
+      props.updateNewPostText(text);      
    };
 
    let PostChange = () => {
-      debugger;
+      
       let text = newMessage.current.value; 
-      debugger;
-      props.updateNewPostText(text);
-      debugger;
+      
+      props.dispatch({ type: 'UPDATE-NEW-POST-TEXT', newText: text });
+      
    };
 
 

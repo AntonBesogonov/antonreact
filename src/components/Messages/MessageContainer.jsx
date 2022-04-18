@@ -6,12 +6,12 @@ import Message from './Message';
 const MessageContainer = (props) => {
    debugger;
    let addMesag = () => {
-      props.store.dispatch(addPostActionCreator());
+      props.dispatch(addPostActionCreator());
    };
 
    let onPostChange = (text) => {
       let action = updateNewPostTextActionCreator(text);
-      props.store.dispatch(action);
+      props.dispatch(action);
    };
 
    return (<Message updateNewPostText={onPostChange} addMesag={addMesag} personList={props.profilePage.personList} />);
