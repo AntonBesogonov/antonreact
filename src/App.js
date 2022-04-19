@@ -6,6 +6,7 @@ import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
 import Message from './components/Messages/Message';
 import MessageContainer from './components/Messages/MessageContainer';
+import Dialogs from './components/redux/Dialogs';
 
 
 
@@ -24,7 +25,7 @@ const App = (props) => {
       <Routes>
         <Route path="/profile" element={<Profile two={props.appState.dialogPro.qwerty} />} />
         console.log(props);
-        <Route path="/messag" element={<MessageContainer store={props.store} /*two={props.appState.profilePage.compot} dispatch={props.dispatch}*/  /> }  />
+        <Route path="/messag" element={<Dialogs store={props.store} /*two={props.appState.profilePage.compot} dispatch={props.dispatch}*/ />}  />
       </Routes>
       
     </div>

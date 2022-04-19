@@ -7,9 +7,9 @@ const Message = (props) => {
    let newMessage = React.createRef();
 
    let onAddMesag = () => {   
-      debugger;
+      
       props.addMesag(); 
-      debugger;
+      
    };
 
    let postChange = () => {   

@@ -15,7 +15,8 @@ let rerender = (state) => {
       <BrowserRouter>
         <App
           appState={state}          
-          dispatch={store.dispatch.bind(store)}                 
+          dispatch={store.dispatch.bind(store)}  
+          
          />
       </BrowserRouter>
     </React.StrictMode>,
