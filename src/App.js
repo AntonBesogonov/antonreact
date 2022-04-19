@@ -8,6 +8,7 @@ import Message from './components/Messages/Message';
 import MessageContainer from './components/Messages/MessageContainer';
 
 
+
 const App = (props) => {
   return (
     <div className="app-wrapper">
@@ -22,7 +23,8 @@ const App = (props) => {
 
       <Routes>
         <Route path="/profile" element={<Profile two={props.appState.dialogPro.qwerty} />} />
-        <Route path="/messag" element={<Message two={props.appState.profilePage.compot} dispatch={props.dispatch}  /> }  />
+        console.log(props);
+        <Route path="/messag" element={<MessageContainer store={props.store} /*two={props.appState.profilePage.compot} dispatch={props.dispatch}*/  /> }  />
       </Routes>
       
     </div>

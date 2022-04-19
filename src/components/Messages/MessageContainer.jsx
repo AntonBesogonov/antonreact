@@ -3,18 +3,22 @@ import { addPostActionCreator, updateNewPostTextActionCreator } from '../redux/p
 import Message from './Message';
 
 
+
 const MessageContainer = (props) => {
    debugger;
+   
+   let state = props.store.getState();
+   
    let addMesag = () => {
-      props.dispatch(addPostActionCreator());
+      props.store.dispatch(addPostActionCreator());
    };
 
    let onPostChange = (text) => {
       let action = updateNewPostTextActionCreator(text);
-      props.dispatch(action);
+      props.store.dispatch(action);
    };
 
-   return (<Message updateNewPostText={onPostChange} addMesag={addMesag} personList={props.profilePage.personList} />);
+   return (<Message updateNewPostText={onPostChange} addMesag={addMesag} two={state.profilePage.compot} newPostText={state.profilePage.newPostText} />);
 };
 
 export default MessageContainer;
