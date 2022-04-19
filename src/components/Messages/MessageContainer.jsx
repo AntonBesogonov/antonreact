@@ -4,7 +4,7 @@ import Message from './Message';
 
 
 const MessageContainer = (props) => {
-   debugger;
+   
    let addMesag = () => {
       props.dispatch(addPostActionCreator());
    };

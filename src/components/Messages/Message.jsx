@@ -4,15 +4,13 @@ import mess from './Mes.module.css';
 
 
 
-
-
 const Message = (props) => {
    let personList = props.two.map(client => <div>{client.id} and {client.name} </div>);   
    let newMessage = React.createRef();
 
    let onAddMesag = () => {
       
-      props.updateNewPostText(text);      
+      props.dispatch({ type: 'ADD-POST' });      
    };
 
    let PostChange = () => {
