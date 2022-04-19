@@ -5,9 +5,12 @@ import Message from './Message';
 
 
 const MessageContainer = (props) => {
+<<<<<<< HEAD
    debugger;
    
    let state = props.store.getState();
+=======
+>>>>>>> 85bc2eea047feb7b2ba876fc5551d51d72cbb3dc
    
    let addMesag = () => {
       props.store.dispatch(addPostActionCreator());
