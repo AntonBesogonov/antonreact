@@ -24,10 +24,12 @@ const App = (props) => {
 
       <Routes>
         <Route path="/profile" element={<Profile two={props.appState.dialogPro.qwerty} />} />
-        console.log(props);
-        <Route path="/messag" element={<Dialogs store={props.store} /*two={props.appState.profilePage.compot} dispatch={props.dispatch}*/ />}  />
+        
+        <Route path="/messag" element={<Dialogs store={props.appState} dispatch={props.update} two={props.appState.profilePage.compot} />} />
+        
+        
       </Routes>
-      
+      сonsole.log(props.update);
     </div>
   );
 };

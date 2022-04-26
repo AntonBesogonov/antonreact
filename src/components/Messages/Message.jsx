@@ -13,11 +13,11 @@ const Message = (props) => {
    };
 
    let postChange = () => {   
-      debugger;
+      
       let text = newMessage.current.value; 
-      debugger;
+      
       props.updateNewPostText(text);   
-      debugger;
+      
    };
 
 
