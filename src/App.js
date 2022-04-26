@@ -4,8 +4,6 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Head/Header';
 import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
-import Message from './components/Messages/Message';
-import MessageContainer from './components/Messages/MessageContainer';
 import Dialogs from './components/redux/Dialogs';
 
 
@@ -23,13 +21,13 @@ const App = (props) => {
       </header>
 
       <Routes>
-        <Route path="/profile" element={<Profile two={props.appState.dialogPro.qwerty} />} />
+        <Route path="/profile" element={<Profile two={props.appState.getState().dialogPro.qwerty} />} />
         
-        <Route path="/messag" element={<Dialogs store={props.appState} dispatch={props.update} two={props.appState.profilePage.compot} />} />
+        <Route path="/messag" element={<Dialogs store={props.appState} dispatch={props.update} two={props.appState.getState().profilePage.compot} />} />
         
         
       </Routes>
-      сonsole.log(props.update);
+      
     </div>
   );
 };

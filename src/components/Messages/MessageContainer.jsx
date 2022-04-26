@@ -7,7 +7,7 @@ import Message from './Message';
 const MessageContainer = (props) => {
    
    
-   let state = props.store;
+   let state = props.store.getState();
    
    let addMesag = () => {
       props.store.dispatch(addPostActionCreator());
@@ -16,8 +16,8 @@ const MessageContainer = (props) => {
    let onPostChange = (text) => {
       
       let action = updateNewPostTextActionCreator(text);
-      debugger;
-      props.dispatch.dispatch(action);
+      
+      props.store.dispatch(action);
       
    };
 

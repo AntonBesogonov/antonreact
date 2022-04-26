@@ -5,7 +5,7 @@ import prof from './Profile.module.css';
 
 
 const Profile = (props) => {
-
+  
   let personList = props.two.map(client => <div>{client.id} and {client.name} </div>);
   
   return (
