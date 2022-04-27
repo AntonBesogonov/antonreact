@@ -5,21 +5,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-
-
-
+import StoreContext from './StoreContext';
 
 let rerender = (state) => {  
   ReactDOM.render(
     <React.StrictMode>
       <BrowserRouter>
-        <App
-          appState={store}          
-          dispatch={store.dispatch.bind(store)}  
+        <StoreContext.Provider value={store} >
+          < App
+          /*appState={store}          
+          dispatch={store.dispatch.bind(store)}  */
           
           
-         />
+          />
+        </StoreContext.Provider>
       </BrowserRouter>
+      
     </React.StrictMode>,
     document.getElementById('root')
   );

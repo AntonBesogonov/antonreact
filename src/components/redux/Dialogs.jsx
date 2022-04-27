@@ -3,7 +3,7 @@ import MessageContainer from "../Messages/MessageContainer"
 const Dialogs = (props) => {
   return (
     <div>
-      <MessageContainer store={props.store}/>
+      <MessageContainer /*store={props.store}*//>
     </div>
   )
 }
