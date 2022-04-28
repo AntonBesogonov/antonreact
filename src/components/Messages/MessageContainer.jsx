@@ -1,27 +1,40 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { addPostActionCreator, updateNewPostTextActionCreator } from '../redux/profile-reducer';
 import Message from './Message';
 
+// const MessageContainer = (props) => {
+//    let state = props.store.getState();
+//    let addMesag = () => {
+//       props.store.dispatch(addPostActionCreator());
+//    };
 
+//    let onPostChange = (text) => {
 
-const MessageContainer = (props) => {
-   
-   
-   let state = props.store.getState();
-   
-   let addMesag = () => {
-      props.store.dispatch(addPostActionCreator());
-   };
+//       props.store.dispatch(updateNewPostTextActionCreator(text));
+//    };
 
-   let onPostChange = (text) => {
+//    return (<Message updateNewPostText={onPostChange}
+//       addMesag={addMesag}
+//       two={state.profilePage.compot}
+//       newPostText={state.profilePage.newPostText} />);
+// };
+
+let mapStateToProps = (state) => {
+   return {
+      two: state.profilePage.compot
+   }
+}
+
+let mapDispatchToProps = (dispatch) => {
+   debugger;
+   return {
       
-      let action = updateNewPostTextActionCreator(text);
-      
-      props.store.dispatch(action);
-      
-   };
+      updateNewPostText: (text) => { dispatch(updateNewPostTextActionCreator(text)) },
+      addMesag: () => { dispatch(addPostActionCreator()) }
+   }
+}
 
-   return (<Message updateNewPostText={onPostChange} addMesag={addMesag} two={state.profilePage.compot} newPostText={state.profilePage.newPostText}  />);
-};
+const MessageContainer = connect(mapStateToProps, mapDispatchToProps)(Message);
 
 export default MessageContainer;
