@@ -8,11 +8,11 @@ const Nav = () => {
 
     <div className={navigator.nav}>
       <div>
-        
-        
+
+
       </div>
       <div>
-       
+
       </div>
     </div>
 
