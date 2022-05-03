@@ -8,7 +8,7 @@ let store = {
       compot: [
         { id: 111, name: '1' },
         { id: 22, name: 'geru' },
-        { id: 22, name: 'geru' },
+        { id: 22, name: 'ger1212u' },
       ],
       newPostText: '',
     },

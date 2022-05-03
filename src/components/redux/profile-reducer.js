@@ -10,7 +10,7 @@ let initionalState = {
 };
 
 let profileReducer = (state = initionalState, action) => {
-
+  //debugger;
   switch (action.type) {
     case ADD_POST: {
       let newPost = {
@@ -31,9 +31,7 @@ let profileReducer = (state = initionalState, action) => {
     }
     default:
       return state;
-  }
-
-  
+  } 
 
 };
 
@@ -48,6 +46,6 @@ export let updateNewPostTextActionCreator = (text) => {
     type: UPDATE_NEW_POST_TEXT,
     newText: text,
   };
-};
+}; 
 
 export default profileReducer;

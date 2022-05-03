@@ -10,11 +10,10 @@ const Message = (props) => {
       props.addMesag();
    };
 
-   let postChange = () => {
+   let postChange = () => {      
       let text = newMessage.current.value;
       props.updateNewPostText(text);
    };
-
 
    return (
       <div className={mess.message}>{personList}         
