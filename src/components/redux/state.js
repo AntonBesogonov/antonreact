@@ -7,8 +7,8 @@ let store = {
     profilePage: {
       compot: [
         { id: 111, name: '1' },
-        { id: 22, name: 'geru' },
-        { id: 22, name: 'ger1212u' },
+        { id: 22, name: 'ge23ru' },
+        { id: 22, name: 'ger1223412u' },
       ],
       newPostText: '',
     },

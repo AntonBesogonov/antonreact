@@ -4,7 +4,7 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 let initionalState = {
   compot: [
     { id: 111, name: '1' },
-    { id: 22, name: 'geru' },
+    { id: 22, name: 'ge123ru' },
   ],
   newPostText: '',
 };
@@ -17,22 +17,21 @@ let profileReducer = (state = initionalState, action) => {
         id: 5,
         name: state.newPostText,
       };
-      let stateCopy = { ...state };
-      stateCopy.compot = { ...state.compot };
-      stateCopy.compot.push(newPost);
-      stateCopy.newPostText = '';
-      return stateCopy;
+      return {
+        ...state,
+        ...state.compot.push(newPost),
+        newPostText: '',
+      };
     }
-    case UPDATE_NEW_POST_TEXT: {
-      let stateCopy = { ...state };
-      stateCopy.compot = { ...state.compot };
-      stateCopy.newPostText = action.newText;
-      return stateCopy;
-    }
+    case UPDATE_NEW_POST_TEXT:
+      return {
+        ...state,
+        newPostText: action.newText,
+      };
+
     default:
       return state;
-  } 
-
+  }
 };
 
 export let addPostActionCreator = () => {
@@ -46,6 +45,6 @@ export let updateNewPostTextActionCreator = (text) => {
     type: UPDATE_NEW_POST_TEXT,
     newText: text,
   };
-}; 
+};
 
 export default profileReducer;

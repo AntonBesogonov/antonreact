@@ -2,7 +2,7 @@ import React from 'react';
 import mess from './Mes.module.css';
 
 const Message = (props) => {
-   debugger;
+   
    let personList = props.two.map(client => <div>{client.id} and {client.name} </div>);
    let newMessage = React.createRef();
 
