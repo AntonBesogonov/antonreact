@@ -15,7 +15,7 @@ const App = (props) => {
       <header>
         <Link to="/profile">profile</Link>
         <div></div>
-        <Link to="/messag">message</Link>
+        <Link to="/messag">Сообщения</Link>
       </header>
 
       <Routes>
