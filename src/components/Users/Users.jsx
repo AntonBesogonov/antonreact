@@ -1,15 +1,42 @@
 import React from "react";
+import Us from './Users.module.css';
 
 let Users = (props) => {
+     let mapingUsers = props.two.map(u => <div>{u.id} and {u.fullName} </div>);
      
-     let mapingUsers = props.users.map(u => <div key={u.id}>{u.id} and {u.fullName}</div>);
 
      return (
-          <div >{mapingUsers}         
-             
+          <div className={Us.users}>{mapingUsers}         
+             123
           </div>
        );
+
+
 }
 
 export default Users;
 
+{/* <div>
+     {
+          props.users.map(u => <div>
+               <span>
+                    <div>
+                         <img></img>
+                    </div>
+                    <div>
+                         <button>Follow</button>
+                    </div>
+               </span>
+               <span>
+                    <span>
+                         <div>{u.fullName}</div>
+                         <div>{u.status}</div>
+                    </span>
+                    <span>
+                         <div>{u.location.country}</div>
+                         <div>{u.location.city}</div>
+                    </span>
+               </span>
+          </div>)
+     }
+</div> */}
