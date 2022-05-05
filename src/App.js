@@ -5,6 +5,7 @@ import Header from './components/Head/Header';
 import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/redux/Dialogs';
+import Users from './components/Users/Users';
 
 const App = (props) => {
   return (
@@ -16,26 +17,15 @@ const App = (props) => {
         <Link to="/profile">profile</Link>
         <div></div>
         <Link to="/messag">Сообщения</Link>
+        <div></div>
+        <Link to="/users">Пользователи</Link>
+
       </header>
 
       <Routes>
-        <Route
-          path="/profile"
-          element={
-            <Profile
-              /*two={props.appState.getState().dialogPro.qwerty}*/ />}
-        />
-
-        <Route
-          path="/messag"
-          element={
-            <Dialogs
-              /*store={props.appState}
-              dispatch={props.update} two={ compot
-              }*/
-            />
-          }
-        />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/messag" element={<Dialogs />} />
+        <Route path="/users" element={<Users />} />
       </Routes>
     </div>
   );
