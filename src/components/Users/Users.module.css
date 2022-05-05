@@ -6,3 +6,8 @@
      margin: 0 auto;
      font-size: larger;
    }
+
+   .photo {
+     width: 200px;
+     height: 200px;
+   }
