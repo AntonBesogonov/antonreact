@@ -2,12 +2,12 @@ import React from "react";
 import Us from './Users.module.css';
 
 let Users = (props) => {
-     let mapingUsers = props.two.map(u => <div>{u.id} and {u.fullName} </div>);
+     let mapingUsers = props.users.map(u => <div>{u.id} and {u.fullName} </div>);
      
 
      return (
           <div className={Us.users}>{mapingUsers}         
-             123
+             
           </div>
        );
 

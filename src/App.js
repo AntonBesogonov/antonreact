@@ -5,7 +5,7 @@ import Header from './components/Head/Header';
 import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/redux/Dialogs';
-import Users from './components/Users/Users';
+import Users from './components/redux/Users';
 
 const App = (props) => {
   return (
