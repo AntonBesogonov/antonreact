@@ -4,8 +4,8 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Head/Header';
 import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/redux/Dialogs';
-import Users from './components/redux/Users';
+import Dialogs from './components/Messages/MessageContainer';
+import Users from './components/Users/UsersContainer';
 
 const App = (props) => {
   return (
