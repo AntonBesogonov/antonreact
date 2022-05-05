@@ -3,40 +3,42 @@ import Us from './Users.module.css';
 
 
 let Users = (props) => {
-     
-     
+
+
 
      return (
-          
-          <div className={Us.users}>         
+
+          <div className={Us.users}>
                {
                     props.users.map(u => <div key={u.id}>
                          <span>
-                     <div>
-                          <img src={u.photoUrl} className={Us.photo}></img>
-                     </div>
-                     <div>
-                          <button>Follow</button>
-                     </div>
-                </span>
-                <span>
-                     <span>
-                          <div>{u.fullName}</div>
-                          <div>{u.status}</div>
-                     </span>
-                     <span>
-                          <div>{u.location.country}</div>
-                          <div>{u.location.city}</div>
-                     </span>
-                </span>
+                              <div>
+                                   <img src={u.photoUrl} className={Us.photo}></img>
+                              </div>
+                              <div>
+                                   {u.followed
+                                        ? <button onClick={() => { props.unfollow(u.id) }} >UnFollow</button>
+                                        : <button onClick={() => { props.follow(u.id) }} >Follow</button>}
+                              </div>
+                         </span>
+                         <span>
+                              <span>
+                                   <div>{u.fullName}</div>
+                                   <div>{u.status}</div>
+                              </span>
+                              <span>
+                                   <div>{u.location.country}</div>
+                                   <div>{u.location.city}</div>
+                              </span>
+                         </span>
                     </div>)
-          }
+               }
           </div>
-       );
+     );
 
 
 }
 
 export default Users;
 
- 
+

@@ -6,7 +6,8 @@ let initionalState = {
   users: [
     {
       id: 1,
-      photoUrl: 'https://bugaga.ru/uploads/posts/2016-01/1453106278_znamenitosti-dva-v-odnom-10.jpg',
+      photoUrl:
+        'https://bugaga.ru/uploads/posts/2016-01/1453106278_znamenitosti-dva-v-odnom-10.jpg',
       followed: false,
       fullName: 'Dmitry',
       status: 'I am boss 1',
@@ -14,7 +15,8 @@ let initionalState = {
     },
     {
       id: 2,
-      photoUrl: 'https://bugaga.ru/uploads/posts/2016-01/1453106278_znamenitosti-dva-v-odnom-10.jpg',
+      photoUrl:
+        'https://bugaga.ru/uploads/posts/2016-01/1453106278_znamenitosti-dva-v-odnom-10.jpg',
       followed: true,
       fullName: 'Sasha',
       status: 'I am boss 2',
@@ -22,7 +24,8 @@ let initionalState = {
     },
     {
       id: 3,
-      photoUrl: 'https://bugaga.ru/uploads/posts/2016-01/1453106278_znamenitosti-dva-v-odnom-10.jpg',
+      photoUrl:
+        'https://bugaga.ru/uploads/posts/2016-01/1453106278_znamenitosti-dva-v-odnom-10.jpg',
       followed: false,
       fullName: 'Andrew',
       status: 'I am boss 3',
