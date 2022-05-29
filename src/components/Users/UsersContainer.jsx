@@ -4,6 +4,7 @@ import axios from "axios";
 import React from "react";
 import Users from "./Users";
 
+
 class UsersContainer extends React.Component {
      componentDidMount() {
           axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
@@ -30,6 +31,7 @@ class UsersContainer extends React.Component {
                     Users={this.props.Users}
                     follow={this.props.follow}
                     unfollow={this.props.unfollow}
+                    
                />
 
           );
