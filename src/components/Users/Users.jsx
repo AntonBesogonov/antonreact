@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import Us from './Users.module.css';
 import userPhoto from '../../assets/images/photo-icon.png'
@@ -11,7 +10,7 @@ let Users = (props) => {
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i);
   }
-  debugger;
+  
   return (
     <div className={Us.users}>
       
@@ -21,7 +20,7 @@ let Users = (props) => {
         })};
       
       {
-        this.props.users.map(u => <div key={u.id}>
+        props.users.map(u => <div key={u.id}>
           <span>
             <div>
               <img src={u.photos.small != null ? u.photos.small : userPhoto} className={Us.photo}></img>
