@@ -27,7 +27,7 @@ class UsersContainer extends React.Component {
                <Users TotalUsersCount={this.props.TotalUsersCount}
                     pageSize={this.props.pageSize}
                     currentPage={this.props.currentPage}
-                    onPageChanged={this.onPageChanged}
+                    onPageChanged={this.props.onPageChanged}
                     Users={this.props.Users}
                     follow={this.props.follow}
                     unfollow={this.props.unfollow}
