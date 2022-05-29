@@ -11,15 +11,15 @@ let Users = (props) => {
   for (let i = 1; i <= pagesCount; i++) {
     pages.push(i);
   }
-
+  debugger;
   return (
     <div className={Us.users}>
-      <div>
+      
         {pages.map(p => {
           return <span className={props.currentPage === p && Us.selectedPage} onClick={(e) => { props.onPageChanged(p); }
           }>{p}</span>
-        })}
-      </div>
+        })};
+      
       {
         this.props.users.map(u => <div key={u.id}>
           <span>
