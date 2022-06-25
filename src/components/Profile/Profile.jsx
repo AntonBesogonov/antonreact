@@ -1,20 +1,21 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import Preloader from '../common/Preloader/Preloader';
 import prof from './Profile.module.css';
 
-
-
-
 const Profile = (props) => {
-  
-  let personList = props.two.map(client => <div>{client.id} and {client.name} </div>);
-  
-  return (    
-    <div className={prof.itsprof}>{personList}</div>
-  )
+  debugger;
+  if (!props.profile) {
+    return <Preloader />
+  }
+  debugger;
+  return (
+    <div className={prof.itsprof}>
+      <img src={props.profile.photos.large}></img>
+    </div>
+  );
 };
 
 export default Profile;
 
 
- 
+
