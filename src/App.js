@@ -6,6 +6,7 @@ import Nav from './components/Nav/Nav';
 import Profile from './components/Profile/Profile';
 import Dialogs from './components/Messages/MessageContainer';
 import Users from './components/Users/UsersContainer';
+import ProfileContainer from './components/Profile/ProfileContainer';
 
 const App = (props) => {
   return (
@@ -23,8 +24,8 @@ const App = (props) => {
       </header>
 
       <Routes>
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/messag" element={<Dialogs />} />
+        <Route path="/profile" render={() => <ProfileContainer/>} />
+        <Route path="/messag" element={<Dialogs/>} />
         <Route path="/users" element={<Users />} />
       </Routes>
     </div>
