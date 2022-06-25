@@ -6,20 +6,21 @@ import { setUserProfile } from '../redux/profile-reducer';
 
 class ProfileContainer extends React.Component {  
   componentDidMount() {
+    
     axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`).then(response => {      
-      this.props.setUserProfile(response.data);         
+      this.props.setUserProfile(response.data);     
     });
 }
   render() {
-    return (      
+      return (      
       <Profile {...this.props} profile={this.props.profile} />      
     )
   }
 };
 
 let mapStatetoProps = (props) => ({
-profile: StaticRange.profilePage.profile
-})
+  profile: StaticRange.profilePage.profile
+});
 
 export default connect (mapStatetoProps, {setUserProfile}) (ProfileContainer);
 
