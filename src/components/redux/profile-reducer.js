@@ -55,11 +55,9 @@ export let updateNewPostTextActionCreator = (text) => {
   };
 };
 
-export let setUserProfile = (profile) => {
-  return {
-    type: SET_USER_PROFILE, profile
-    
-  };
-};
+
+
+export let setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
+ 
 
 export default profileReducer;
