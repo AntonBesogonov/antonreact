@@ -24,7 +24,7 @@ const App = (props) => {
       </header>
 
       <Routes>
-        <Route path="/profile" element={<Profile/>} />
+        <Route path="/profile/:userId" element={<Profile/>} />
         <Route path="/messag" element={<Dialogs/>} />
         <Route path="/users" element={<Users />} />
       </Routes>
