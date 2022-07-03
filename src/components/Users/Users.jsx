@@ -51,5 +51,3 @@ let Users = (props) => {
 }
 
 export default Users;
-
-
